@@ -33,5 +33,10 @@ public class UserController {
     public Collection<User> getAllUser() {
         return  dataSource.fetchAll();
     }
+
+    @DeleteMapping
+    public void deleteUser(@RequestParam(value = "key") String key) {
+        dataSource.remove(UUID.fromString(key));
+    }
 }
 
