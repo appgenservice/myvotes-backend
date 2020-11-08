@@ -30,6 +30,7 @@ public class AppController {
         return appRepository.findAll();
     }*/
 
+    @CrossOrigin(origins = "*")
     @PostMapping
     public void addApp(@RequestParam(value = "appName") String appName, @RequestParam(value = "email") String email) {
         appRepository.save(new AppRequest(appName, email));
