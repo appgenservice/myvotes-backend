@@ -57,6 +57,7 @@
 			<scope>system</scope>
 			<systemPath>${project.basedir}/src/main/resources/java-rest-base-0.0.1-SNAPSHOT-client.jar</systemPath>
 		</dependency>
+
 	</dependencies>
 
 	<build>
