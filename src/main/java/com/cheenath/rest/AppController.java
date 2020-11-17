@@ -33,6 +33,7 @@ public class AppController {
     @CrossOrigin(origins = "*")
     @PostMapping
     public void addApp(@RequestBody AppRequest appRequest) {
+        appRequest.setCreateDate(System.currentTimeMillis());
         appRepository.save(appRequest);
     }
 

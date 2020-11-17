@@ -13,15 +13,15 @@ public class AppRequest {
     private String appName;
     private String email;
     private String url;
-    private Date createDate;
+    private long createDate;
 
     protected AppRequest() {
     }
 
-    public AppRequest(final String appName, final String email, final String url) {
+    public AppRequest(final String appName, final String email, final long createDate, final String url) {
         this.appName = appName;
         this.email = email;
-        this.createDate = new Date();
+        this.createDate = createDate;
         this.url = url;
     }
 
@@ -41,11 +41,11 @@ public class AppRequest {
         this.appName = appName;
     }
 
-    public Date getCreateDate() {
+    public long getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Date createDate) {
+    public void setCreateDate(long createDate) {
         this.createDate = createDate;
     }
 
