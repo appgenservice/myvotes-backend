@@ -32,8 +32,8 @@ public class AppController {
 
     @CrossOrigin(origins = "*")
     @PostMapping
-    public void addApp(@RequestParam(value = "appName") String appName, @RequestParam(value = "email") String email) {
-        appRepository.save(new AppRequest(appName, email));
+    public void addApp(@RequestBody AppRequest appRequest) {
+        appRepository.save(appRequest);
     }
 
    /* @DeleteMapping

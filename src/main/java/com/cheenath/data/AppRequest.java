@@ -11,15 +11,18 @@ public class AppRequest {
     @GeneratedValue
     private Integer id;
     private String appName;
+    private String email;
+    private String url;
     private Date createDate;
 
     protected AppRequest() {
     }
 
-    public AppRequest(final String appName, final String email) {
+    public AppRequest(final String appName, final String email, final String url) {
         this.appName = appName;
         this.email = email;
         this.createDate = new Date();
+        this.url = url;
     }
 
     public Integer getId() {
@@ -54,6 +57,15 @@ public class AppRequest {
         this.email = email;
     }
 
-    private String email;
+
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
 
 }
