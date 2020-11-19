@@ -24,13 +24,13 @@ public class AppService {
     @Autowired
     private AppRepository appRepository;
 //APP_GIT_REPO_URL=https://appgenservice:Jasilin1@github.com/appgenservice/${APP_DIR}.git
-    private String jenkinsURL = "http://www.appgenservice.com:8080/job/deploy_java_app/buildWithParameters?APP_GIT_REPO_URL=%s&GIT_BRANCH=%s&APP_ID=%d&APP_NAME=%s&DB_NAME=%s&DB_USER=%s&DB_PASSWORD=%s";
+    private String jenkinsURL = "http://www.appgenservice.com:8080/job/deploy_java_app/buildWithParameters?APP_GIT_REPO_URL=%s&GIT_BRANCH=%s&APP_ID=%d&APP_NAME=%s&DB_NAME=%s&DB_USER=%s&DB_PASSWORD=%s&PORT=%d";
 
     UriComponents uriComponents = UriComponentsBuilder.fromUriString(jenkinsURL).build();
     public void deploy(Integer appId) throws AppManagementException {
 
         AppDetails appDetails = appRepository.findById(appId).orElseThrow(() -> new AppManagementException(String.format("App id %d not found", appId)));
-        String url = String.format(jenkinsURL, appDetails.getUrl(),appDetails.getBranch(), appDetails.getId(), appDetails.getAppName(), appDetails.getDbName(), appDetails.getDbUser(), appDetails.getDbPassword());
+        String url = String.format(jenkinsURL, appDetails.getUrl(),appDetails.getBranch(), appDetails.getId(), appDetails.getAppName(), appDetails.getDbName(), appDetails.getDbUser(), appDetails.getDbPassword(), appDetails.getPort());
         HttpHeaders headers = new HttpHeaders(){{
             String auth = "admin:1147548cbaaddcbb739f82ce2f0a59871e";
             byte[] encodedAuth = Base64.encodeBase64(
