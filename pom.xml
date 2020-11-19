@@ -57,7 +57,11 @@
 			<scope>system</scope>
 			<systemPath>${project.basedir}/src/main/resources/java-rest-base-0.0.1-SNAPSHOT-client.jar</systemPath>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.5.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>

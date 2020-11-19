@@ -1,19 +1,22 @@
 package com.cheenath.rest;
-import com.cheenath.data.AppRequest;
-import com.cheenath.data.AppRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
+import com.cheenath.AppManagementException;
+import com.cheenath.data.AppDetails;
+import com.cheenath.data.AppRepository;
+import com.cheenath.service.AppService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/app")
 public class AppController {
-    private final int PORT_NUMBER_BASE = 8080;
-//    private final String JAVA_REPO_URL = "https://github.com/appgenservice/java-simple-rest-bootstrap.git";
+
 
     @Autowired
-    private AppRepository appRepository;
+    private AppService service;
+
 
     /*@GetMapping
     public App getApp(@RequestParam(value = "appId") Long appId) {
@@ -25,16 +28,22 @@ public class AppController {
         return appRepository.findMaxAppId() != null ? appRepository.findMaxAppId().intValue() + 1 : 1;
     }*/
 
-    /*@GetMapping(value = "/list")
-    public Iterable<App> getAllApps() {
-        return appRepository.findAll();
-    }*/
+    @GetMapping(value = "/list")
+    @CrossOrigin(origins = "*")
+    public Iterable<AppDetails> getAllApps() {
+        return service.findAll();
+    }
 
     @CrossOrigin(origins = "*")
     @PostMapping
-    public void addApp(@RequestBody AppRequest appRequest) {
-        appRequest.setCreateDate(System.currentTimeMillis());
-        appRepository.save(appRequest);
+    public ResponseEntity<AppDetails> addApp(@RequestBody AppDetails appRequest) {
+        return new ResponseEntity<>(service.add(appRequest), HttpStatus.OK);
+    }
+
+    @CrossOrigin(origins = "*")
+    @PostMapping("/deploy/{appId}")
+    public void deployApp(@PathVariable("appId") Integer appId) throws AppManagementException {
+        service.deploy(appId);
     }
 
    /* @DeleteMapping
