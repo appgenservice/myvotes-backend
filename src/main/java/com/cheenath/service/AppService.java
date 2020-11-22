@@ -32,7 +32,7 @@ public class AppService {
         AppDetails appDetails = appRepository.findById(appId).orElseThrow(() -> new AppManagementException(String.format("App id %d not found", appId)));
         String url = String.format(jenkinsURL, appDetails.getUrl(),appDetails.getBranch(), appDetails.getId(), appDetails.getAppName(), appDetails.getDbName(), appDetails.getDbUser(), appDetails.getDbPassword(), appDetails.getPort());
         HttpHeaders headers = new HttpHeaders(){{
-            String auth = "admin:1145adeb8267296f334cae0d61549ada4e";
+            String auth = "admin:1189efce18589fad059d8e51342c7d9775";
             byte[] encodedAuth = Base64.encodeBase64(
                     auth.getBytes(Charset.forName("US-ASCII")) );
             String authHeader = "Basic " + new String( encodedAuth );
