@@ -1,4 +1,4 @@
-package com.cheenath.data;
+package com.ags.data;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,9 +1,8 @@
-package com.cheenath.rest;
+package com.ags.rest;
 
-import com.cheenath.AppManagementException;
-import com.cheenath.data.AppDetails;
-import com.cheenath.data.AppRepository;
-import com.cheenath.service.AppService;
+import com.ags.AppManagementException;
+import com.ags.service.AppService;
+import com.ags.data.AppDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.cheenath;
+package com.ags;
 
 public class AppManagementException extends Exception {
     public AppManagementException(final String message) {

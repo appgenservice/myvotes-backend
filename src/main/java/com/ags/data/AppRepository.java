@@ -1,4 +1,4 @@
-package com.cheenath.data;
+package com.ags.data;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

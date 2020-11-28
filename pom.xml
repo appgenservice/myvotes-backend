@@ -8,7 +8,7 @@
 		<version>2.3.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
+	<groupId>com.ags</groupId>
 	<artifactId>java-application</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>accessing-data-jpa</name>
@@ -51,13 +51,6 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.cheenath.infra</groupId>
-			<artifactId>java-rest-base</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/src/main/resources/java-rest-base-0.0.1-SNAPSHOT-client.jar</systemPath>
-		</dependency>
-		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-ui</artifactId>
 			<version>1.5.0</version>
@@ -71,7 +64,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<includeSystemScope>true</includeSystemScope>
-					<mainClass>com.cheenath.RestServiceApplication</mainClass>
+					<mainClass>com.ags.RestServiceApplication</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>

@@ -1,8 +1,8 @@
-package com.cheenath.service;
+package com.ags.service;
 
-import com.cheenath.AppManagementException;
-import com.cheenath.data.AppDetails;
-import com.cheenath.data.AppRepository;
+import com.ags.AppManagementException;
+import com.ags.data.AppDetails;
+import com.ags.data.AppRepository;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
