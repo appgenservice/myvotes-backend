@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-@ComponentScan(basePackages = "com.cheenath")
+@ComponentScan(basePackages = "com.ags")
 public class RestServiceApplication {
 
     public static void main(String[] args) {
