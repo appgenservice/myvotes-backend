@@ -11,10 +11,10 @@ public class VoteController {
     @Autowired
     private VoteService service;
 
-    @GetMapping(value = "/list")
-    public Iterable<Vote> getVotes() {
-        return service.getVotes();
-    }
+//    @GetMapping(value = "/list")
+//    public Iterable<Vote> getVotes() {
+//        return service.getVotes();
+//    }
 
     @PostMapping
     public Vote addUser(@RequestParam(value = "email") String email, @RequestParam(value = "opinion") int opinion) {
