@@ -18,7 +18,7 @@ public class VoteController {
 
     @PostMapping
     @CrossOrigin(origins = "*")
-    public Vote addUser(@RequestParam(value = "email") String email, @RequestParam(value = "opinion") int opinion) {
-        return service.addVote(new Vote(1, email, opinion));
+    public Vote addUser(@RequestBody Vote vote) {
+        return service.addVote(vote);
     }
 }
