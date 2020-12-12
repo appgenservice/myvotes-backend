@@ -11,8 +11,8 @@
 	<groupId>com.ags</groupId>
 	<artifactId>java-application</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>accessing-data-jpa</name>
-	<description>Demo project for Spring Boot</description>
+	<name>myvotes</name>
+	<description>My Votes</description>
 
 	<properties>
 		<java.version>1.8</java.version>
