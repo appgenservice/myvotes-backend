@@ -3,6 +3,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.Date;
 
 @Entity
 public class Vote {
@@ -13,6 +14,7 @@ public class Vote {
     private Long pollId;
     private String email;
     private int opinion;
+    private Date createDate;
 
     protected Vote() {}
 
@@ -53,4 +55,14 @@ public class Vote {
     public void setOpinion(int opinion) {
         this.opinion = opinion;
     }
+
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
+
 }
