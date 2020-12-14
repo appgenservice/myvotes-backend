@@ -19,6 +19,7 @@ public class VoteController {
     @PostMapping
     @CrossOrigin(origins = "*")
     public Vote addUser(@RequestBody Vote vote) {
+        vote.setCreateDate(System.currentTimeMillis());
         return service.addVote(vote);
     }
 }

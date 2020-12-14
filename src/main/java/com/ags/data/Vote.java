@@ -14,7 +14,7 @@ public class Vote {
     private Long pollId;
     private String email;
     private int opinion;
-    private Date createDate;
+    private Long createDate;
 
     protected Vote() {}
 
@@ -57,11 +57,11 @@ public class Vote {
     }
 
 
-    public Date getCreateDate() {
+    public Long getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Date createDate) {
+    public void setCreateDate(Long createDate) {
         this.createDate = createDate;
     }
 
