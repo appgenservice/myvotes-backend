@@ -13,6 +13,7 @@ public class PollTopic {
     private Long id;
     private String title;
     private String question;
+    private String description;
     private String opinion1;
     private String opinion2;
     private String opinion3;
@@ -90,6 +91,14 @@ public class PollTopic {
 
     public void setCreateDate(Long createDate) {
         this.createDate = createDate;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 
