@@ -22,6 +22,13 @@ public class PollTopicController {
         return service.getPollTopics();
     }
 
+
+    @GetMapping(value = "/{id}")
+    @CrossOrigin(origins = "*")
+    public PollTopic getPollTopic(@PathVariable("id") long id) {
+        return service.getPollTopic(id);
+    }
+
     @PostMapping
     @CrossOrigin(origins = "*")
     public PollTopic addPollTopic(@RequestBody PollTopic pollTopic) {

@@ -2,10 +2,10 @@ package com.ags.service;
 
 import com.ags.data.PollTopic;
 import com.ags.data.PollTopicRepository;
-import com.ags.data.Vote;
-import org.apache.tomcat.jni.Poll;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class PollTopicService {
@@ -18,5 +18,9 @@ public class PollTopicService {
 
     public PollTopic addPollTopic(PollTopic pollTopic) {
         return pollTopicRepository.save(pollTopic);
+    }
+
+    public PollTopic getPollTopic(long id) {
+        return pollTopicRepository.findById(id).orElse(null);
     }
 }
