@@ -15,6 +15,7 @@ public class Vote {
     private String email;
     private int opinion;
     private Long createDate;
+    private boolean consent;
 
     protected Vote() {}
 
@@ -65,4 +66,11 @@ public class Vote {
         this.createDate = createDate;
     }
 
+    public boolean isConsent() {
+        return consent;
+    }
+
+    public void setConsent(boolean consent) {
+        this.consent = consent;
+    }
 }

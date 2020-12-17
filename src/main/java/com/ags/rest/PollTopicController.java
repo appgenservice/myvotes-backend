@@ -35,4 +35,5 @@ public class PollTopicController {
         pollTopic.setCreateDate(System.currentTimeMillis());
         return service.addPollTopic(pollTopic);
     }
+
 }
