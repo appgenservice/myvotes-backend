@@ -70,16 +70,17 @@
           <div class="album py-5">
             <div class="container">
                   <c:forEach items="${polls}" var="poll">
-                   <div class="card">
-                       <div class="card-body">
-                         <div class="card-title">
-                           <a href="/poll/${poll.id}/${poll.title}">${poll.question}</a>
-                         </div>
-                         <div class="card-description">${poll.description}</div>
+                       <hr class="mb-3" style="visibility: hidden;">
+                       <div class="card">
+                           <div class="card-body">
+                             <div class="card-title">
+                               <a href="/poll/${poll.id}/${poll.title}">${poll.question}</a>
+                             </div>
+                             <div class="card-description">${poll.description}</div>
+                           </div>
                        </div>
-                     </div>
-                   </div>
                   </c:forEach>
+            </div>
           </div>
         </main>
 
