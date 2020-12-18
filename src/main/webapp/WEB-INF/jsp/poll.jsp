@@ -96,7 +96,7 @@
                             <hr class="mb-3" style="visibility: hidden;">
                             <div class="custom-control custom-radio">
                                 <input type="radio" id="customRadio3" name="opinion" class="custom-control-input" value="3" onClick="opinionSelected();">
-                                <label class="custom-control-label" for="customRadio2" >${pollTopic.opinion3 }</label>
+                                <label class="custom-control-label" for="customRadio3" >${pollTopic.opinion3 }</label>
                             </div>
                           </c:if>
                           <c:if test="${not empty pollTopic.opinion4}">
