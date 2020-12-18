@@ -15,6 +15,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="/js/myvotes.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <link rel="stylesheet" href="/css/myvotes.css">
     <!-- Favicons -->
     <meta name="theme-color" content="#7952b3">
@@ -74,10 +75,11 @@
               </div>
               <hr class="mb-3" style="visibility: hidden;">
                 <div class="row">
-                        <div class="col-md-8 mb-6">
+                        <div class="col-md-12 mb-6">
                             <h4 class="display-6">Your opinion matters. </h4>
-                            <hr class="mb-3">
+                             <hr class="mb-3">
                         </div>
+
                         <div class="col-md-8 mb-6">
                           <c:if test="${not empty pollTopic.opinion1}">
                               <div class="custom-control custom-radio">
@@ -137,8 +139,36 @@
                             </div>
                         </div>
             </div>
+             <c:forEach items="${opinionCount}" var="oC">
+                <c:set var="property" value="opinion${oC[0]}" />
+                <input type="hidden" name="chartData" value='${pollTopic[property]},${oC[1]}'/>
+             </c:forEach>
+             <hr class="mb-3">
+             <div id="piechart_3d" style="width: 600px; height: 300px;"></div>
         </div>
+
         </main>
+        <script type="text/javascript">
+          google.charts.load("current", {packages:["corechart"]});
+          google.charts.setOnLoadCallback(drawChart);
+          function drawChart() {
+            var dataArray = [['Opinion', 'Count']];
+            for(var i = 0 ; i < document.getElementsByName("chartData").length; i++){
+                var data = document.getElementsByName("chartData")[i].value.split(',');
+                data[1] = parseInt(data[1]);
+                dataArray.push(data);
+            }
+           var data = google.visualization.arrayToDataTable(dataArray);
+
+            var options = {
+              title: 'What others think?',
+              pieHole: 0.4
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+          }
+        </script>
 
   </body>
 </html>
