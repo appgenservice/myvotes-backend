@@ -9,15 +9,13 @@ function validateEmail(_id) {
    if(filter.test(email)) {
       $( ".invalid-email" ).hide();
       $( "#consent" ).show();
+     if($( "#consentCheck" ).is(":checked")) {
+        $( "#voteDiv" ).show();
+     }
    }else {
       $( ".invalid-email" ).show();
       $( "#consent" ).hide();
-   }
-
-   if($( "#consentCheck" ).is(":checked")) {
-           $( "#voteDiv" ).show();
-   }else {
-       $( "#voteDiv" ).hide();
+      $( "#voteDiv" ).hide();
    }
 }
 
