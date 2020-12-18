@@ -141,7 +141,7 @@
             </div>
              <c:forEach items="${opinionCount}" var="oC">
                 <c:set var="property" value="opinion${oC[0]}" />
-                <input type="hidden" name="chartData" value='${pollTopic[property]},${oC[1]}'/>
+                <input type="hidden" name="chartData" value='${pollTopic[property]}|${oC[1]}'/>
              </c:forEach>
              <hr class="mb-3">
              <div id="piechart_3d" style="width: 600px; height: 300px;"></div>
@@ -154,7 +154,7 @@
           function drawChart() {
             var dataArray = [['Opinion', 'Count']];
             for(var i = 0 ; i < document.getElementsByName("chartData").length; i++){
-                var data = document.getElementsByName("chartData")[i].value.split(',');
+                var data = document.getElementsByName("chartData")[i].value.split('|');
                 data[1] = parseInt(data[1]);
                 dataArray.push(data);
             }
