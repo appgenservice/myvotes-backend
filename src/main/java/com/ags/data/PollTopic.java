@@ -19,6 +19,7 @@ public class PollTopic {
     private String opinion3;
     private String opinion4;
     private String opinion5;
+    private String pageURL;
     private String imageURL;
     private Long createDate;
 
@@ -109,5 +110,14 @@ public class PollTopic {
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
     }
+
+    public String getPageURL() {
+        return pageURL;
+    }
+
+    public void setPageURL(String pageURL) {
+        this.pageURL = pageURL;
+    }
+
 
 }
