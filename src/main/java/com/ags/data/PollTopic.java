@@ -19,6 +19,7 @@ public class PollTopic {
     private String opinion3;
     private String opinion4;
     private String opinion5;
+    private String imageURL;
     private Long createDate;
 
     public Long getId() {
@@ -101,5 +102,12 @@ public class PollTopic {
         this.description = description;
     }
 
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+    }
 
 }
