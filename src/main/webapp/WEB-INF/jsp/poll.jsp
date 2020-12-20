@@ -18,6 +18,10 @@
     <script src="/js/myvotes.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <link rel="stylesheet" href="/css/myvotes.css">
+    <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0"
+        />
     <!-- Favicons -->
     <meta name="theme-color" content="#7952b3">
     <style>
@@ -145,7 +149,7 @@
                 <input type="hidden" name="chartData" value="${pollTopic[property]}|${oC[1]}"/>
              </c:forEach>
              <hr class="mb-3">
-             <div id="piechart_3d" style="width: 600px; height: 300px;"></div>
+             <div id="piechart_3d" style="margin: auto; width: 90%; padding: 10px;; height: 300px;"></div>
         </div>
 
         </main>
@@ -162,24 +166,20 @@
            var data = google.visualization.arrayToDataTable(dataArray);
 
             var options = {
-              title: 'What others think?',
-              pieHole: 0.4
+              title: 'What others think?'
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
             chart.draw(data, options);
           }
         </script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-              <script>window.jQuery || document.write('<script src="./assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
 
-              <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-9F3NYKL17S"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
           gtag('config', 'G-9F3NYKL17S');
         </script>
   </body>
