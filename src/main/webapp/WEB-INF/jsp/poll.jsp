@@ -173,6 +173,42 @@
             chart.draw(data, options);
           }
         </script>
+        <script>
+        var x = document.getElementById("demo");
+
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.watchPosition(showPosition, error);
+          } else {
+            function seconds_with_leading_zeros(dt)
+            {
+              return /\((.*)\)/.exec(new Date().toString())[1];
+            }
+
+            dt = new Date();
+            localStorage.setItem('location', seconds_with_leading_zeros(dt));
+          }
+        }
+
+        function showPosition(position) {
+            if(position) {
+                localStorage.setItem('location', position.coords.latitude +", " + position.coords.longitude);
+            }else {
+                function seconds_with_leading_zeros(dt)
+                {
+                  return /\((.*)\)/.exec(new Date().toString())[1];
+                }
+
+                dt = new Date();
+                localStorage.setItem('location', seconds_with_leading_zeros(dt));
+            }
+        }
+        function error(err) {
+          console.warn('ERROR(' + err.code + '): ' + err.message);
+        }
+
+        showPosition();
+        </script>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-9F3NYKL17S"></script>

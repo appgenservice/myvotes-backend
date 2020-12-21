@@ -1,6 +1,11 @@
 
 function opinionSelected() {
     document.getElementById("emailDiv").style.display = 'block';
+    var emailFromLS = localStorage.getItem('email');
+    if(emailFromLS) {
+        document.getElementById("email").value = emailFromLS;
+        validateEmail("email");
+    }
 }
 
 function validateEmail(_id) {
@@ -30,9 +35,11 @@ function consentChange() {
 function submitVote(_id) {
     if(document.getElementById("email") && document.querySelector('input[name="opinion"]:checked').value) {
       var email = document.getElementById("email").value;
+      localStorage.setItem('email', email);
       var opinion = document.querySelector('input[name="opinion"]:checked').value;
       var consent = $( "#consentCheck" ).is(":checked");
-      const dataToSend = JSON.stringify({"email": email, "opinion": opinion, "pollId": _id, "consent": consent});
+      var location = localStorage.getItem('location');
+      const dataToSend = JSON.stringify({"email": email, "opinion": opinion, "pollId": _id, "consent": consent, "location": location});
       if(email && opinion){
         var requestString = encodeURI("/vote");
         console.log(requestString);
@@ -44,6 +51,7 @@ function submitVote(_id) {
           console.log(this.responseText);
           window.location = "/?vote=success";
         }
+
       }
   }
 }

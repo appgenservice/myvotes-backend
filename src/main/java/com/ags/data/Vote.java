@@ -16,6 +16,7 @@ public class Vote {
     private int opinion;
     private Long createDate;
     private boolean consent;
+    private String location;
 
     protected Vote() {}
 
@@ -72,5 +73,13 @@ public class Vote {
 
     public void setConsent(boolean consent) {
         this.consent = consent;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 }
