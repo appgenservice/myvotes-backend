@@ -19,6 +19,11 @@ public class PollTopic {
     private String opinion3;
     private String opinion4;
     private String opinion5;
+    private String opinion6;
+    private String opinion7;
+    private String opinion8;
+    private String opinion9;
+    private String opinion10;
     private String pageURL;
     private String imageURL;
     private Long createDate;
@@ -117,6 +122,47 @@ public class PollTopic {
 
     public void setPageURL(String pageURL) {
         this.pageURL = pageURL;
+    }
+
+
+    public String getOpinion6() {
+        return opinion6;
+    }
+
+    public void setOpinion6(String opinion6) {
+        this.opinion6 = opinion6;
+    }
+
+    public String getOpinion7() {
+        return opinion7;
+    }
+
+    public void setOpinion7(String opinion7) {
+        this.opinion7 = opinion7;
+    }
+
+    public String getOpinion8() {
+        return opinion8;
+    }
+
+    public void setOpinion8(String opinion8) {
+        this.opinion8 = opinion8;
+    }
+
+    public String getOpinion9() {
+        return opinion9;
+    }
+
+    public void setOpinion9(String opinion9) {
+        this.opinion9 = opinion9;
+    }
+
+    public String getOpinion10() {
+        return opinion10;
+    }
+
+    public void setOpinion10(String opinion10) {
+        this.opinion10 = opinion10;
     }
 
 

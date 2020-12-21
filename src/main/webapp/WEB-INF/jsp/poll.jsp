@@ -117,9 +117,44 @@
                             <hr class="mb-3" style="visibility: hidden;">
                             <div class="custom-control custom-radio">
                                 <input type="radio" id="customRadio5" name="opinion" class="custom-control-input" value="5" onClick="opinionSelected();">
-                                <label class="custom-control-label" for="customRadio5" >${pollTopic.opinion4 }</label>
+                                <label class="custom-control-label" for="customRadio5" >${pollTopic.opinion5 }</label>
                             </div>
                           </c:if>
+                          <c:if test="${not empty pollTopic.opinion6}">
+                              <hr class="mb-3" style="visibility: hidden;">
+                              <div class="custom-control custom-radio">
+                                  <input type="radio" id="customRadio6" name="opinion" class="custom-control-input" value="6" onClick="opinionSelected();">
+                                  <label class="custom-control-label" for="customRadio6" >${pollTopic.opinion6 }</label>
+                              </div>
+                          </c:if>
+                        <c:if test="${not empty pollTopic.opinion7}">
+                            <hr class="mb-3" style="visibility: hidden;">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio7" name="opinion" class="custom-control-input" value="7" onClick="opinionSelected();">
+                                <label class="custom-control-label" for="customRadio7" >${pollTopic.opinion7 }</label>
+                            </div>
+                        </c:if>
+                      <c:if test="${not empty pollTopic.opinion8}">
+                          <hr class="mb-3" style="visibility: hidden;">
+                          <div class="custom-control custom-radio">
+                              <input type="radio" id="customRadio8" name="opinion" class="custom-control-input" value="8" onClick="opinionSelected();">
+                              <label class="custom-control-label" for="customRadio8" >${pollTopic.opinion8 }</label>
+                          </div>
+                      </c:if>
+                    <c:if test="${not empty pollTopic.opinion9}">
+                        <hr class="mb-3" style="visibility: hidden;">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio9" name="opinion" class="custom-control-input" value="9" onClick="opinionSelected();">
+                            <label class="custom-control-label" for="customRadio9" >${pollTopic.opinion9 }</label>
+                        </div>
+                    </c:if>
+                    <c:if test="${not empty pollTopic.opinion10}">
+                        <hr class="mb-3" style="visibility: hidden;">
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio10" name="opinion" class="custom-control-input" value="10" onClick="opinionSelected();">
+                            <label class="custom-control-label" for="customRadio10" >${pollTopic.opinion10}</label>
+                        </div>
+                    </c:if>
                            <hr class="mb-3" style="visibility: hidden;">
                             <div class="row hidden" id="emailDiv">
                               <div class="col-md-6 mb-3">
