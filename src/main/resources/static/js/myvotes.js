@@ -1,5 +1,11 @@
 
 function opinionSelected() {
+      var opinion = document.querySelector('input[name="opinion"]:checked').value;
+      if(opinion == 11){
+        document.getElementById("customopinion").style.display = 'block';
+      }else {
+         $( "#customopinion" ).hide();
+      }
     document.getElementById("emailDiv").style.display = 'block';
     var emailFromLS = localStorage.getItem('email');
     if(emailFromLS) {
@@ -35,11 +41,12 @@ function consentChange() {
 function submitVote(_id) {
     if(document.getElementById("email") && document.querySelector('input[name="opinion"]:checked').value) {
       var email = document.getElementById("email").value;
+      var custom = document.getElementById("custom").value;
       localStorage.setItem('email', email);
       var opinion = document.querySelector('input[name="opinion"]:checked').value;
       var consent = $( "#consentCheck" ).is(":checked");
       var location = localStorage.getItem('location');
-      const dataToSend = JSON.stringify({"email": email, "opinion": opinion, "pollId": _id, "consent": consent, "location": location});
+      const dataToSend = JSON.stringify({"email": email, "opinion": opinion, "pollId": _id, "consent": consent, "location": location, "custom": custom});
       if(email && opinion){
         var requestString = encodeURI("/vote");
         console.log(requestString);

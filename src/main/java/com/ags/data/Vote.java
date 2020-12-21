@@ -13,6 +13,7 @@ public class Vote {
     private Long id;
     private Long pollId;
     private String email;
+    private String custom;
     private int opinion;
     private Long createDate;
     private boolean consent;
@@ -82,4 +83,13 @@ public class Vote {
     public void setLocation(String location) {
         this.location = location;
     }
+
+    public String getCustom() {
+        return custom;
+    }
+
+    public void setCustom(String custom) {
+        this.custom = custom;
+    }
+
 }

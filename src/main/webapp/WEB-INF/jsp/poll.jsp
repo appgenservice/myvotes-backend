@@ -155,6 +155,15 @@
                             <label class="custom-control-label" for="customRadio10" >${pollTopic.opinion10}</label>
                         </div>
                     </c:if>
+                    <hr class="mb-3" style="visibility: hidden;">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio11" name="opinion" class="custom-control-input" value="11" onClick="opinionSelected();">
+                        <label class="custom-control-label" for="customRadio11" >Non of the above</label>
+                    </div>
+                    <hr class="mb-3" style="visibility: hidden;" >
+                    <div class="input-group mb-3 hidden" id="customopinion">
+                        <input type="text" class="form-control" placeholder="Please mention your choice" aria-label="Username" id="custom" aria-describedby="basic-addon1" style="width: 100%;">
+                    </div>
                            <hr class="mb-3" style="visibility: hidden;">
                             <div class="row hidden" id="emailDiv">
                               <div class="col-md-6 mb-3">

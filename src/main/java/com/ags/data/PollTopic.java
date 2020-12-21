@@ -24,6 +24,8 @@ public class PollTopic {
     private String opinion8;
     private String opinion9;
     private String opinion10;
+
+    private String opinion11;
     private String pageURL;
     private String imageURL;
     private Long createDate;
@@ -164,6 +166,15 @@ public class PollTopic {
     public void setOpinion10(String opinion10) {
         this.opinion10 = opinion10;
     }
+
+    public String getOpinion11() {
+        return opinion11;
+    }
+
+    public void setOpinion11(String opinion11) {
+        this.opinion11 = opinion11;
+    }
+
 
 
 }
