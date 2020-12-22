@@ -34,7 +34,7 @@ function validateEmail(_id) {
 
 function consentChange() {
     var emailFromLS = localStorage.getItem('email') || "newuser";
-    gtag('event', 'pollvote', {'event_category': mailFromLS+'consent','event_label': 'click'});
+    gtag('event', 'pollvote', {'event_category': emailFromLS+'consent','event_label': 'click'});
     if($( "#consentCheck" ).is(":checked")) {
         $( "#voteDiv" ).show();
     }else {
