@@ -1,5 +1,7 @@
 
 function opinionSelected() {
+      var emailFromLS = localStorage.getItem('email') || "newuser";
+      gtag('event', 'pollvote', {'event_category': emailFromLS+'opinion','event_label': 'selected'});
       var opinion = document.querySelector('input[name="opinion"]:checked').value;
       if(opinion == 11){
         document.getElementById("customopinion").style.display = 'block';
@@ -31,6 +33,8 @@ function validateEmail(_id) {
 }
 
 function consentChange() {
+    var emailFromLS = localStorage.getItem('email') || "newuser";
+    gtag('event', 'pollvote', {'event_category': mailFromLS+'consent','event_label': 'click'});
     if($( "#consentCheck" ).is(":checked")) {
         $( "#voteDiv" ).show();
     }else {
@@ -39,6 +43,8 @@ function consentChange() {
 }
 
 function submitVote(_id) {
+    var emailFromLS = localStorage.getItem('email') || "newuser";
+    gtag('event', 'pollvote', {'event_category':  emailFromLS+'vote','event_label': 'submitted'});
     if(document.getElementById("email") && document.querySelector('input[name="opinion"]:checked').value) {
       var email = document.getElementById("email").value;
       var custom = document.getElementById("custom").value;
