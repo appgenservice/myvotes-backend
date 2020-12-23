@@ -1,17 +1,14 @@
 package com.ags.data;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
+@IdClass(VoteId.class)
 public class Vote {
-
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private Long id;
     private Long pollId;
+    @Id
     private String email;
     private String custom;
     private int opinion;
@@ -25,14 +22,6 @@ public class Vote {
         this.pollId = pollId;
         this.email = email;
         this.opinion = opinion;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public Long getPollId() {
@@ -92,4 +81,19 @@ public class Vote {
         this.custom = custom;
     }
 
+}
+
+class VoteId implements  Serializable {
+    @Id
+    private Long pollId;
+    @Id
+    private String email;
+
+    public VoteId() {
+
+    }
+    public VoteId(Long pollId, String email) {
+        this.pollId = pollId;
+        this.email = email;
+    }
 }
