@@ -17,4 +17,8 @@ public class MovieService {
     public Movie add(Movie movie) {
         return repository.save(movie);
     }
+
+    public Movie getMovie(Long id) {
+        return repository.findById(id).orElse(null);
+    }
 }

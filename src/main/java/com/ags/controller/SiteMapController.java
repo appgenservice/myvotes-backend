@@ -1,4 +1,4 @@
-package com.ags.controller.movie;
+package com.ags.controller;
 
 import com.ags.data.PollTopic;
 import com.ags.data.movie.Movie;
@@ -7,26 +7,24 @@ import com.ags.service.movie.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class MovieController {
+public class SiteMapController {
+
+    @Autowired
+    private PollTopicService pollTopicService;
 
     @Autowired
     private MovieService service;
-    @RequestMapping(value ={"/movie"})
-    public String getMovies(ModelMap model) {
+
+    @RequestMapping(value ={"/sitemap.xml"})
+    public String loginMessage(ModelMap model) {
+        Iterable<PollTopic> polls = pollTopicService.getPollTopics();
+        model.put("polls", polls);
         Iterable<Movie> movies = service.getMovies();
         model.put("movies", movies);
-        return "movie";
-    }
-
-    @RequestMapping(value ={"/movie/{id}/{titile}"})
-    public String getMovies(ModelMap model, @PathVariable("id") Long id) {
-        Movie movie = service.getMovie(id);
-        model.put("movie", movie);
-        return "watch";
+        return "sitemap";
     }
 
 }
