@@ -39,7 +39,8 @@
         <jsp:include page="header.jsp"/>
         <main>
             <div class="container">
-              <h4>Malayalam</h4>
+             <hr class="mb-3" style="visibility: hidden;">
+              <h5>Malayalam</h5>
               <ul>
                  <c:forEach items="${movies}" var="movie">
                     <li>
