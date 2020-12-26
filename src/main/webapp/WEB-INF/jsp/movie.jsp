@@ -38,8 +38,14 @@
   <body>
         <jsp:include page="header.jsp"/>
         <main>
+
             <div class="container">
              <hr class="mb-3" style="visibility: hidden;">
+             <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                 <h5 class="alert-heading">Disclaimer!</h5>
+                  We don't own any video content. We just help you to search video content in the internet easily!
+             </div>
+
               <h5>Malayalam</h5>
               <ul>
                  <c:forEach items="${movies}" var="movie">
