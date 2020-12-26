@@ -12,7 +12,7 @@ public class HomeController {
 
     @Autowired
     private PollTopicService pollTopicService;
-    @RequestMapping(value ={"", "/", "/home"})
+    @RequestMapping(value ={"", "/", "/home", "/poll"})
     public String loginMessage(ModelMap model) {
         Iterable<PollTopic> polls = pollTopicService.getPollTopics();
         model.put("polls", polls);

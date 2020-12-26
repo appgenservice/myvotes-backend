@@ -36,6 +36,7 @@
     </style>
   </head>
   <body>
+        <jsp:include page="header.jsp"/>
         <main>
             <div class="container">
               <h4>Malayalam</h4>

@@ -36,6 +36,7 @@
     </style>
   </head>
   <body>
+        <jsp:include page="header.jsp"/>
         <main>
               <div id="ytplayer"></div>
         </main>

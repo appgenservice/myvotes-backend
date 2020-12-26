@@ -25,6 +25,14 @@
             </svg>
             <strong>&nbsp;myvotes.in</strong>
           </a>
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/poll">Poll</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/movie">Movie</a>
+            </li>
+          </ul>
         </div>
       </div>
 </header>
