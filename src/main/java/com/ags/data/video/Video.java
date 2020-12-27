@@ -8,7 +8,7 @@ import javax.persistence.Id;
 @Entity
 public class Video {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String title;
     private String url;
@@ -21,13 +21,14 @@ public class Video {
     private boolean drama;
     private boolean romance;
     private boolean fantasy;
-
+    private boolean mystery;
     private boolean family;
 
     private int rating;
     private int year;
 
-    protected Video() {}
+    protected Video() {
+    }
 
     public Video(Long id, String title, String url) {
         this.id = id;
@@ -157,6 +158,11 @@ public class Video {
         this.family = family;
     }
 
+    public boolean isMystery() {
+        return mystery;
+    }
 
-
+    public void setMystery(boolean mystery) {
+        this.mystery = mystery;
+    }
 }
