@@ -22,6 +22,8 @@ public class Video {
     private boolean romance;
     private boolean fantasy;
 
+    private boolean family;
+
     private int rating;
     private int year;
 
@@ -146,6 +148,15 @@ public class Video {
     public void setRating(int rating) {
         this.rating = rating;
     }
+
+    public boolean isFamily() {
+        return family;
+    }
+
+    public void setFamily(boolean family) {
+        this.family = family;
+    }
+
 
 
 }
