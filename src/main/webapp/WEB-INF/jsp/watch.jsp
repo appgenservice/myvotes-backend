@@ -38,10 +38,38 @@
   <body>
         <jsp:include page="header.jsp"/>
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                         <h5 class="alert-heading">Disclaimer!</h5>
-                          We don't own any video content. We just help you to search video content in the internet easily!
+            Disclaimer! We don't own any video content. We just help you to search video content in the internet easily!
          </div>
         <main>
+              <div class="container">
+                <button type="button" class="btn btn-outline-secondary">Movie</button>
+                <button type="button" class="btn btn-outline-secondary">Malayalam</button>
+                <c:if test="${video.comedy}">
+                    <button type="button" class="btn btn-outline-secondary">Comedy</button>
+                </c:if>
+                <c:if test="${video.action}">
+                    <button type="button" class="btn btn-outline-secondary">Action</button>
+                </c:if>
+                <c:if test="${video.thriller}">
+                    <button type="button" class="btn btn-outline-secondary">Thriller</button>
+                </c:if>
+                <c:if test="${video.horror}">
+                    <button type="button" class="btn btn-outline-secondary">Horror</button>
+                </c:if>
+                <c:if test="${video.drama}">
+                    <button type="button" class="btn btn-outline-secondary">Drama</button>
+                </c:if>
+                <c:if test="${video.romance}">
+                    <button type="button" class="btn btn-outline-secondary">Romance</button>
+                </c:if>
+                <c:if test="${video.fantasy}">
+                    <button type="button" class="btn btn-outline-secondary">Fantasy</button>
+                </c:if>
+                <c:if test="${video.year != null}">
+                    <button type="button" class="btn btn-outline-secondary">${video.year}</button>
+                </c:if>
+              </div>
+              <hr class="mb-3" style="visibility: hidden;">
               <div id="ytplayer"></div>
         </main>
 
@@ -58,7 +86,7 @@
           var playerWidth = $( window ).width() > 700 ? '640' : $( window ).width() - 50;
           var player;
           function onYouTubePlayerAPIReady() {
-            var youtubeURL = '${movie.url}';
+            var youtubeURL = '${video.url}';
             var videoId = youtubeURL.substring(youtubeURL.indexOf("v=") + 2);
             player = new YT.Player('ytplayer', {
               height: ($(window).height() - ($(window).height() * 10 / 100)) ,

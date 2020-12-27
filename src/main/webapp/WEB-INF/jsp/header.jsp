@@ -17,7 +17,7 @@
           </div>
         </div>
       </div>
-      <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="navbar shadow-sm">
         <div class="container">
           <a href="/" class="navbar-brand d-flex align-items-center" onClick="gtag('event', 'header', {'event_category': 'home','event_label': 'click'});">
             <svg class="bi bi-alert-triangle text-success" width="40px" height="40px" viewBox="0 0 20 15" class="bi bi-puzzle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +30,10 @@
               <a class="nav-link active" aria-current="page" href="/poll">Poll</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/movie">Movie</a>
+              <a class="nav-link" href="/video/1/movie">Movie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/video/2/short film">Short Film</a>
             </li>
           </ul>
         </div>
