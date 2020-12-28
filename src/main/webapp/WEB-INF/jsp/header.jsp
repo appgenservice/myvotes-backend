@@ -26,9 +26,9 @@
             <strong>&nbsp;myvotes.in</strong>
           </a>
           <ul class="nav">
-            <li class="nav-item">
+            <!--<li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/poll">Poll</a>
-            </li>
+            </li>-->
             <li class="nav-item">
               <a class="nav-link" href="/video/1/movie">Movie</a>
             </li>

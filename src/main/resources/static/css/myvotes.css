@@ -9,3 +9,18 @@
 .hidden {
     display: none;
 }
+
+.main-container {
+    width: 515px;
+    margin: auto;
+}
+
+.video-panel {
+    float: left;
+}
+
+.video-header {
+    float: left;
+    padding: 10px;
+    border-bottom: 1px solid 333;
+}
