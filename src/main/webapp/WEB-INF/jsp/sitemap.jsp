@@ -16,7 +16,7 @@
 </c:forEach>
 <c:forEach items="${videos}" var="video">
     <url>
-        <loc>http://myvotes.in/movie/${video.id}/${video.title}</loc>
+        <loc>http://myvotes.in/watch/${video.id}/${video.title}</loc>
         <lastmod>2020-12-26T10:04:26+00:00</lastmod>
         <priority>0.80</priority>
     </url>
