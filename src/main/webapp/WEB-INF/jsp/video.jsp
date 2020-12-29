@@ -78,7 +78,7 @@
                       <a href="/watch/${video.id}/${video.title}">${video.title} (${video.year})</a>
                    </div>
                    <div class="video">
-                    <iframe width="515" height="400"
+                    <iframe class="video-frame"
                     src="https://www.youtube.com/embed/${video.url.substring(video.url.indexOf('v=')+2)}?autoplay=0&mute=1" allowFullScreen="allowFullScreen" and frameBorder="0" >
                     </iframe>
                    </div>
