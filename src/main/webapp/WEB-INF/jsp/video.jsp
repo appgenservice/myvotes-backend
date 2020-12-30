@@ -89,7 +89,7 @@
                         <span class="badge badge-info">${video.romance ? "romance" : ""}</span>
                         <span class="badge badge-info">${video.fantasy ? "fantasy" : ""}</span>
                         <span class="badge badge-info">${video.mystery ? "mystery" : ""}</span>
-                        <span class="badge badge-info">${video.family ? "family" : "12+"}</span>
+                        <span class="badge badge-${video.family ? "info" : "warning"}">${video.family ? "family" : "12+"}</span>
                     </div>
                    </div>
                    <div class="video">
