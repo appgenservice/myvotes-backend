@@ -84,7 +84,6 @@
                         <span class="badge badge-info">${video.action ? "action" : ""}</span>
                         <span class="badge badge-info">${video.thriller ? "thriller" : ""}</span>
                         <span class="badge badge-info">${video.horror ? "horror" : ""}</span>
-                        <span class="badge badge-info">${video.horror ? "horror" : ""}</span>
                         <span class="badge badge-info">${video.drama ? "drama" : ""}</span>
                         <span class="badge badge-info">${video.romance ? "romance" : ""}</span>
                         <span class="badge badge-info">${video.fantasy ? "fantasy" : ""}</span>
