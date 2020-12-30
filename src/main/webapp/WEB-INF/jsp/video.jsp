@@ -79,6 +79,9 @@
                    </div>
                    <div class="description">
                     <p>${video.description}</p>
+                    <div class="tags">${video.comedy ? "#comedy" : ""} ${video.action ? "#action" : ""} ${video.thriller ? "#thriller" : ""} ${video.horror ? "#horror" : ""} ${video.horror ? "#horror" : ""} ${video.drama ? "#drama" : ""}
+                     ${video.romance ? "#romance" : ""} ${video.fantasy ? "#fantasy" : ""} ${video.mystery ? "#mystery" : ""} ${video.family ? "#family" : "18+"}
+                    </div>
                    </div>
                    <div class="video">
                     <iframe class="video-frame"
