@@ -79,8 +79,17 @@
                    </div>
                    <div class="description">
                     <p>${video.description}</p>
-                    <div class="tags">${video.comedy ? "#comedy" : ""} ${video.action ? "#action" : ""} ${video.thriller ? "#thriller" : ""} ${video.horror ? "#horror" : ""} ${video.horror ? "#horror" : ""} ${video.drama ? "#drama" : ""}
-                     ${video.romance ? "#romance" : ""} ${video.fantasy ? "#fantasy" : ""} ${video.mystery ? "#mystery" : ""} ${video.family ? "#family" : "18+"}
+                    <div class="tags">
+                        <span class="badge badge-info">${video.comedy ? "comedy" : ""}</span>
+                        <span class="badge badge-info">${video.action ? "action" : ""}</span>
+                        <span class="badge badge-info">${video.thriller ? "thriller" : ""}</span>
+                        <span class="badge badge-info">${video.horror ? "horror" : ""}</span>
+                        <span class="badge badge-info">${video.horror ? "horror" : ""}</span>
+                        <span class="badge badge-info">${video.drama ? "drama" : ""}</span>
+                        <span class="badge badge-info">${video.romance ? "romance" : ""}</span>
+                        <span class="badge badge-info">${video.fantasy ? "fantasy" : ""}</span>
+                        <span class="badge badge-info">${video.mystery ? "mystery" : ""}</span>
+                        <span class="badge badge-info">${video.family ? "family" : "12+"}</span>
                     </div>
                    </div>
                    <div class="video">
