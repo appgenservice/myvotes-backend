@@ -3,7 +3,6 @@ package com.ags.service.movie;
 import com.ags.data.video.Video;
 import com.ags.data.video.VideoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -12,7 +11,7 @@ public class VideoService {
     private VideoRepository repository;
 
     public Iterable<Video> getVideos(int category) {
-        return repository.findAllByCategoryOrderByCategory(category);
+        return repository.findAllByCategoryOrderByRatingDesc(category);
     }
 
     public Video add(Video movie) {
@@ -24,6 +23,6 @@ public class VideoService {
     }
 
     public Iterable<Video> getVideos() {
-        return repository.findAll();
+        return repository.findAllByOrderByRatingDesc();
     }
 }

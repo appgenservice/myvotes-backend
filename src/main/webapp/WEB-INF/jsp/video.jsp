@@ -67,15 +67,18 @@
              <button type="button" class="btn btn-light">Drama</button>
              <button type="button" class="btn btn-light">Romance</button>
              <button type="button" class="btn btn-light">Fantasy</button>-->
-                 <hr class="mb-3" style="visibility: hidden;">
+  <!--               <hr class="mb-3" style="visibility: hidden;">
                  <div class="alert alert-warning alert-dismissible fade show" role="alert">
                     myvotes.in is one humble attempt to list down movies which I found very interesting and must watch. I hope you will find it interesting as well.
-                 </div>
+                 </div> -->
 
                  <c:forEach items="${videos}" var="video">
                  <div class="video-panel">
                    <div class="video-header">
                       <a href="/watch/${video.id}/${video.title}">${video.title} (${video.year})</a>
+                   </div>
+                   <div class="description">
+                    <p>${video.description}</p>
                    </div>
                    <div class="video">
                     <iframe class="video-frame"

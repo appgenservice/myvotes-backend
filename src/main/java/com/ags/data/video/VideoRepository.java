@@ -4,5 +4,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 public interface VideoRepository extends CrudRepository<Video, Long> {
-    Iterable<Video> findAllByCategoryOrderByCategory(int category);
+    Iterable<Video> findAllByCategoryOrderByRatingDesc(int category);
+    Iterable<Video> findAllByOrderByRatingDesc();
 }
