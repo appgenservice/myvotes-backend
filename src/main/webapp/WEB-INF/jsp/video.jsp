@@ -80,7 +80,7 @@
 
                     <div class="tags">
                         <span class="badge badge-info">${video.comedy ? "comedy" : ""}</span>
-                        <span class="badge badge-info">${video.blackComedy ? "blackComedy" : "Black Comedy"}</span>
+                        <span class="badge badge-info">${video.blackComedy ? "Black Comedy" : ""}</span>
                         <span class="badge badge-info">${video.action ? "action" : ""}</span>
                         <span class="badge badge-info">${video.thriller ? "thriller" : ""}</span>
                         <span class="badge badge-info">${video.horror ? "horror" : ""}</span>
