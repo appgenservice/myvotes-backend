@@ -16,6 +16,7 @@ public class Video {
     private int category;
     private int language;
     private boolean comedy;
+    private boolean blackComedy;
     private boolean action;
     private boolean thriller;
     private boolean horror;
@@ -24,8 +25,7 @@ public class Video {
     private boolean fantasy;
     private boolean mystery;
     private boolean family;
-
-    private int rating;
+    private float rating;
     private int year;
 
     protected Video() {
@@ -142,15 +142,6 @@ public class Video {
         this.year = year;
     }
 
-
-    public int getRating() {
-        return rating;
-    }
-
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
-
     public boolean isFamily() {
         return family;
     }
@@ -175,5 +166,23 @@ public class Video {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public float getRating() {
+        return rating;
+    }
+
+    public void setRating(float rating) {
+        this.rating = rating;
+    }
+
+    public boolean isBlackComedy() {
+        return blackComedy;
+    }
+
+    public void setBlackComedy(boolean blackComedy) {
+        this.blackComedy = blackComedy;
+    }
+
+
 
 }

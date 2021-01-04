@@ -20,6 +20,8 @@
 }
 .description {
     float: left;
+    width: 100%;
+    padding-top: 5px;
 
 }
 @media (max-width: 500px) {

@@ -77,10 +77,10 @@
                    <div class="video-header">
                       <a href="/watch/${video.id}/${video.title}">${video.title} (${video.year})</a>
                    </div>
-                   <div class="description">
-                    <p>${video.description}</p>
+
                     <div class="tags">
                         <span class="badge badge-info">${video.comedy ? "comedy" : ""}</span>
+                        <span class="badge badge-info">${video.blackComedy ? "blackComedy" : "Black Comedy"}</span>
                         <span class="badge badge-info">${video.action ? "action" : ""}</span>
                         <span class="badge badge-info">${video.thriller ? "thriller" : ""}</span>
                         <span class="badge badge-info">${video.horror ? "horror" : ""}</span>
@@ -89,13 +89,19 @@
                         <span class="badge badge-info">${video.fantasy ? "fantasy" : ""}</span>
                         <span class="badge badge-info">${video.mystery ? "mystery" : ""}</span>
                         <span class="badge badge-${video.family ? "info" : "warning"}">${video.family ? "family" : "12+"}</span>
+                        <span class="badge badge-dark">${video.rating} / 10</span>
                     </div>
+                   <div class="description">
+                    <p>${video.description}</p>
                    </div>
-                   <div class="video">
-                    <iframe class="video-frame"
-                    src="https://www.youtube.com/embed/${video.url.substring(video.url.indexOf('v=')+2)}?autoplay=0&mute=1" allowFullScreen="allowFullScreen" and frameBorder="0" >
-                    </iframe>
-                   </div>
+                   <c:if test="${video.url != null}">
+                    <div class="video">
+                        <iframe class="video-frame"
+                            src="https://www.youtube.com/embed/${video.url.substring(video.url.indexOf('v=')+2)}?autoplay=0&mute=1" allowFullScreen="allowFullScreen" and frameBorder="0" >
+                        </iframe>
+                    </div>
+                   </c:if>
+
                  </div>
                  </c:forEach>
             </div>
