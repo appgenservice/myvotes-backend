@@ -28,6 +28,10 @@ public class Video {
     private float rating;
     private int year;
 
+
+    private long updatedTimeStamp;
+
+
     protected Video() {
     }
 
@@ -183,6 +187,13 @@ public class Video {
         this.blackComedy = blackComedy;
     }
 
+    public long getUpdatedTimeStamp() {
+        return updatedTimeStamp;
+    }
+
+    public void setUpdatedTimeStamp(long updatedTimeStamp) {
+        this.updatedTimeStamp = updatedTimeStamp;
+    }
 
 
 }

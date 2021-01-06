@@ -19,6 +19,7 @@ public class VideoDataController {
     @PostMapping
     @CrossOrigin(origins = "*")
     public Video add(@RequestBody Video video) {
+        video.setUpdatedTimeStamp(System.currentTimeMillis());
         return service.add(video);
     }
 
