@@ -5,12 +5,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="Watch Movies online. Links to watch full movie">
-    <meta name="author" content="Watch Movies online. Links to watch full movie">
-    <meta property="og:title" content="Watch Movies online. Links to watch full movie">
-    <meta property="og:description" content="Watch Movies online. Links to watch full movie">
-    <meta property="og:url" content="http://myvotes.in/movie">
-    <title>Watch Movies online. Links to watch full movie</title>
+    <meta name="description" content="Best rated movie and short films. Watch full Movies online. Movie reviews">
+    <meta name="author" content="Best rated movie and short films. Watch full Movies online. Movie reviews">
+    <meta property="og:title" content="Best rated movie and short films. Watch full Movies online. Movie reviews">
+    <meta property="og:description" content="Best rated movie and short films. Watch full Movies online. Movie reviews">
+    <meta property="og:url" content="http://myvotes.in">
+    <title>Best rated movies and short films. Watch full Movies online. Movie reviews</title>
     <link rel="stylesheet" href="/css/myvotes.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -45,40 +45,14 @@
   <body>
         <jsp:include page="header.jsp"/>
         <main>
-
             <div class="main-container">
              <hr class="mb-3" style="visibility: hidden;">
-             <!--<div class="btn-group">
-               <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                 Language
-               </button>
-               <ul class="dropdown-menu">
-                 <li><a class="dropdown-item" href="#">Any</a></li>
-                 <li><hr class="dropdown-divider"></li>
-                 <li><a class="dropdown-item" href="#">Hindi</a></li>
-                 <li><a class="dropdown-item" href="#">Malayalam</a></li>
-                 <li><a class="dropdown-item" href="#">Tamil</a></li>
-               </ul>
-             </div>
-             <button type="button" class="btn btn-light">Comedy</button>
-             <button type="button" class="btn btn-light">Action</button>
-             <button type="button" class="btn btn-light">Thriller</button>
-             <button type="button" class="btn btn-light">Horror</button>
-             <button type="button" class="btn btn-light">Drama</button>
-             <button type="button" class="btn btn-light">Romance</button>
-             <button type="button" class="btn btn-light">Fantasy</button>-->
-  <!--               <hr class="mb-3" style="visibility: hidden;">
-                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                    myvotes.in is one humble attempt to list down movies which I found very interesting and must watch. I hope you will find it interesting as well.
-                 </div> -->
-
                  <c:forEach items="${videos}" var="video">
                  <div class="video-panel">
                    <div class="video-header">
                       <a href="/watch/${video.id}/${video.title}">${video.title} (${video.year})</a>
                    </div>
-
-                    <div class="tags">
+                   <div class="tags">
                         <span class="badge badge-info">${video.comedy ? "comedy" : ""}</span>
                         <span class="badge badge-info">${video.blackComedy ? "Black Comedy" : ""}</span>
                         <span class="badge badge-info">${video.action ? "action" : ""}</span>
@@ -90,7 +64,7 @@
                         <span class="badge badge-info">${video.mystery ? "mystery" : ""}</span>
                         <span class="badge badge-${video.family ? "info" : "warning"}">${video.family ? "family" : "12+"}</span>
                         <span class="badge badge-dark">${video.rating} / 10</span>
-                    </div>
+                   </div>
                    <div class="description">
                     <p>${video.description}</p>
                    </div>
@@ -101,7 +75,6 @@
                         </iframe>
                     </div>
                    </c:if>
-
                  </div>
                  </c:forEach>
             </div>

@@ -5,13 +5,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="${movie.title}">
-    <meta name="author" content="${movie.title}">
-    <meta property="og:title" content="${movie.title}">
-    <meta property="og:description" content="${movie.title}">
-    <meta property="og:url" content="http://myvotes.in/movie">
-    <title>${movie.title}</title>
-
+    <meta name="description" content="${video.description}">
+    <meta name="author" content="${video.title}">
+    <meta property="og:title" content="${video.title}">
+    <meta property="og:description" content="${video.description}">
+    <meta property="og:url" content="http://myvotes.in/watch/${video.id}/${video.title}e">
+    <title>${video.title}</title>
+    <link rel="stylesheet" href="/css/myvotes.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -42,33 +42,22 @@
             Disclaimer! We don't own any video content. We just help you to search video content in the internet easily!
          </div>
         <main>
-              <div class="container">
-                <button type="button" class="btn btn-outline-secondary">Movie</button>
-                <button type="button" class="btn btn-outline-secondary">Malayalam</button>
-                <c:if test="${video.comedy}">
-                    <button type="button" class="btn btn-outline-secondary">Comedy</button>
-                </c:if>
-                <c:if test="${video.action}">
-                    <button type="button" class="btn btn-outline-secondary">Action</button>
-                </c:if>
-                <c:if test="${video.thriller}">
-                    <button type="button" class="btn btn-outline-secondary">Thriller</button>
-                </c:if>
-                <c:if test="${video.horror}">
-                    <button type="button" class="btn btn-outline-secondary">Horror</button>
-                </c:if>
-                <c:if test="${video.drama}">
-                    <button type="button" class="btn btn-outline-secondary">Drama</button>
-                </c:if>
-                <c:if test="${video.romance}">
-                    <button type="button" class="btn btn-outline-secondary">Romance</button>
-                </c:if>
-                <c:if test="${video.fantasy}">
-                    <button type="button" class="btn btn-outline-secondary">Fantasy</button>
-                </c:if>
-                <c:if test="${video.year != null}">
-                    <button type="button" class="btn btn-outline-secondary">${video.year}</button>
-                </c:if>
+              <div class="main-container">
+                <div class="video-panel">
+                  <div class="tags">
+                      <span class="badge badge-info">${video.comedy ? "comedy" : ""}</span>
+                      <span class="badge badge-info">${video.blackComedy ? "Black Comedy" : ""}</span>
+                      <span class="badge badge-info">${video.action ? "action" : ""}</span>
+                      <span class="badge badge-info">${video.thriller ? "thriller" : ""}</span>
+                      <span class="badge badge-info">${video.horror ? "horror" : ""}</span>
+                      <span class="badge badge-info">${video.drama ? "drama" : ""}</span>
+                      <span class="badge badge-info">${video.romance ? "romance" : ""}</span>
+                      <span class="badge badge-info">${video.fantasy ? "fantasy" : ""}</span>
+                      <span class="badge badge-info">${video.mystery ? "mystery" : ""}</span>
+                      <span class="badge badge-${video.family ? "info" : "warning"}">${video.family ? "family" : "12+"}</span>
+                      <span class="badge badge-dark">${video.rating} / 10</span>
+                  </div>
+                </div>
               </div>
               <hr class="mb-3" style="visibility: hidden;">
               <div id="ytplayer"></div>
