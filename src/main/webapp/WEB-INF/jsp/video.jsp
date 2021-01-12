@@ -50,7 +50,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-12">
-                      <button type="submit" class="btn btn-primary float-right" onClick="postComment();">Post</button>
+                      <button type="submit" class="btn btn-primary float-right" onClick="postComment('/home');">Post</button>
                     </div>
                 </div>
                 <div class="alert alert-success hidden" role="alert" id="feedback_status">

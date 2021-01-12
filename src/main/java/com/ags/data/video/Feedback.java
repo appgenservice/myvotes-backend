@@ -11,6 +11,7 @@ public class Feedback {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
+    private String page;
     private String comment;
     private Long createDate;
 
@@ -38,5 +39,12 @@ public class Feedback {
         this.createDate = createDate;
     }
 
+    public String getPage() {
+        return page;
+    }
+
+    public void setPage(String page) {
+        this.page = page;
+    }
 
 }

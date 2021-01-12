@@ -11,6 +11,7 @@
     <meta property="og:description" content="${video.description}">
     <meta property="og:url" content="http://myvotes.in/watch/${video.id}/${video.title}">
     <title>${video.title}</title>
+    <script src="/js/myvotes.js"></script>
     <link rel="stylesheet" href="/css/myvotes.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -46,6 +47,21 @@
         <jsp:include page="header.jsp"/>
         <main>
             <div class="main-container">
+            <hr class="mb-3" style="visibility: hidden;">
+             <div class="video-panel">
+                <div class="form-group">
+                   <small>Let us know your feedback, comments, movie recommendations or anything else</small>
+                   <textarea class="form-control" id="feedback" rows="3" maxlength="200"></textarea>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                      <button type="submit" class="btn btn-primary float-right" onClick="postComment('/watch/${video.id}/${video.title}');">Post</button>
+                    </div>
+                </div>
+                <div class="alert alert-success hidden" role="alert" id="feedback_status">
+                  Thank you for providing us your input!
+                </div>
+             </div>
              <hr class="mb-3" style="visibility: hidden;">
                  <div class="video-panel">
                    <div class="video-header">

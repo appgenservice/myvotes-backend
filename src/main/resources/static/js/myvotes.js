@@ -69,11 +69,11 @@ function submitVote(_id) {
   }
 }
 
-function postComment() {
+function postComment(page) {
     gtag('event', 'feedback', {'event_category':  'feedback_input','event_label': 'submitted'});
     if(document.getElementById("feedback")) {
       var feedback = document.getElementById("feedback").value;
-      const dataToSend = JSON.stringify({"comment": feedback});
+      const dataToSend = JSON.stringify({"comment": feedback, "page": page});
       if(feedback){
         var requestString = encodeURI("/feedback");
         var xhr = new XMLHttpRequest();
