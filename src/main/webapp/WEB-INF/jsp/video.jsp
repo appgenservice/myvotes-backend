@@ -13,14 +13,10 @@
     <title>Best rated movies and short films. Watch full Movies online. Movie reviews</title>
     <link rel="stylesheet" href="/css/myvotes.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="/js/myvotes.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-            $(document).ready(function () {
-                $('.dropdown-toggle').dropdown();
-            });
-    </script>
     <!-- Favicons -->
         <meta
               name="viewport"
@@ -46,6 +42,21 @@
         <jsp:include page="header.jsp"/>
         <main>
             <div class="main-container">
+             <hr class="mb-3" style="visibility: hidden;">
+             <div class="video-panel">
+                <div class="form-group">
+                   <small>Let us know your feedback, comments, movie recommendations or anything else</small>
+                   <textarea class="form-control" id="feedback" rows="3" maxlength="200"></textarea>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                      <button type="submit" class="btn btn-primary float-right" onClick="postComment();">Post</button>
+                    </div>
+                </div>
+                <div class="alert alert-success hidden" role="alert" id="feedback_status">
+                  Thank you for providing us your input!
+                </div>
+             </div>
              <hr class="mb-3" style="visibility: hidden;">
                  <c:forEach items="${videos}" var="video">
                  <div class="video-panel">

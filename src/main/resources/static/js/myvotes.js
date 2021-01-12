@@ -68,3 +68,26 @@ function submitVote(_id) {
       }
   }
 }
+
+function postComment() {
+    gtag('event', 'feedback', {'event_category':  'feedback_input','event_label': 'submitted'});
+    if(document.getElementById("feedback")) {
+      var feedback = document.getElementById("feedback").value;
+      const dataToSend = JSON.stringify({"comment": feedback});
+      if(feedback){
+        var requestString = encodeURI("/feedback");
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", requestString, true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(dataToSend);
+        xhr.onload = function() {
+
+         $( "#feedback_status" ).show();
+         setTimeout(function(){
+            $( "#feedback_status" ).hide();
+            document.getElementById("feedback").value = "";
+         }, 5000);
+        }
+      }
+  }
+}
