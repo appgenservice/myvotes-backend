@@ -64,6 +64,7 @@
                       <a href="/watch/${video.id}/${video.title}">${video.title} (${video.year})</a>
                    </div>
                    <div class="tags">
+                        <span class="badge badge-info">${video.feelGood ? "Feel Good" : ""}</span>
                         <span class="badge badge-info">${video.comedy ? "comedy" : ""}</span>
                         <span class="badge badge-info">${video.blackComedy ? "Black Comedy" : ""}</span>
                         <span class="badge badge-info">${video.action ? "action" : ""}</span>

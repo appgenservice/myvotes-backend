@@ -25,10 +25,9 @@ public class Video {
     private boolean fantasy;
     private boolean mystery;
     private boolean family;
+    private boolean feelGood;
     private float rating;
     private int year;
-
-
     private long updatedTimeStamp;
 
 
@@ -193,6 +192,14 @@ public class Video {
 
     public void setUpdatedTimeStamp(long updatedTimeStamp) {
         this.updatedTimeStamp = updatedTimeStamp;
+    }
+
+    public boolean isFeelGood() {
+        return feelGood;
+    }
+
+    public void setFeelGood(boolean feelGood) {
+        this.feelGood = feelGood;
     }
 
 
